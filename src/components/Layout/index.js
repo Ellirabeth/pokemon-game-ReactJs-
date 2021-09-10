@@ -1,30 +1,33 @@
 import css from './style.module.css'
 
-const Layout = ({title, descr, urlBg, colorBg}) => {
-
-    // const layoutStyle = urlBg ? {backgroundImage: `url(${urlBg})`} : {background: `${colorBg}`}
+const Layout = ({id, title, urlBg, colorBg, children}) => {
     const layoutStyle = {
         backgroundImage: urlBg && `url("${urlBg}")`,
         backgroundColor: colorBg
     }
 
     console.log("<Layout /> : \n" +
+        " id=" + id + "\n" +
         " title=" + title + "\n" +
-        " descr=" + descr + "\n" +
         " urlBg=" + urlBg + "\n" +
-        " colorBg= " + colorBg);
+        " colorBg=" + colorBg + "\n" +
+        " children= " + children);
 
     const body = () => {
         return (
-            <section className={css.root} style={layoutStyle}>
+            <section
+                className={css.root}
+                style={layoutStyle}
+                id={id}
+            >
                 <div className={css.wrapper} >
                     <article>
                         <div className={css.title}>
                             <h3>{title}</h3>
-                            <span className={css.separator}></span>
+                            <span className={css.separator}/>
                         </div>
-                        <div className={`${css.desc}, ${css.full}`}>
-                            <p>{descr}</p>
+                        <div className={`${css.desc} ${css.full}`}>
+                            {children}
                         </div>
                     </article>
                 </div>
