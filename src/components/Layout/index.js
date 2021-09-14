@@ -5,14 +5,6 @@ const Layout = ({id, title, urlBg, colorBg, children}) => {
         backgroundImage: urlBg && `url("${urlBg}")`,
         backgroundColor: colorBg
     }
-
-    console.log("<Layout /> : \n" +
-        " id=" + id + "\n" +
-        " title=" + title + "\n" +
-        " urlBg=" + urlBg + "\n" +
-        " colorBg=" + colorBg + "\n" +
-        " children= " + children);
-
     const body = () => {
         return (
             <section

@@ -2,10 +2,9 @@ import css from './style.module.css'
 import cardBackSide from './assets/card-back-side.jpg'
 import {useState} from 'react';
 
-const PokemonCard = ({name, img, id, type, values}) => {
+const PokemonCard = ({name, img, id, type, values }) => {
     const [isActive, setActive]  = useState(false);
     const handleClick = () => {
-        console.log(name + " old=" + isActive + "new= " + !isActive)
         setActive(!isActive);
     }
     const body = () => {
@@ -26,7 +25,6 @@ const PokemonCard = ({name, img, id, type, values}) => {
                                 </div>
                                 <div className={css.info}>
                                     <span className={css.number}>#{id}</span>
-                                     eslint-disable-next-line jsx-a11y/heading-has-content
                                     <h3 className={css.name}>
                                         {name}
                                     </h3>

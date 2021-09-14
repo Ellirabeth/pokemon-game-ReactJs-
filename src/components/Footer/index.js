@@ -1,8 +1,5 @@
 import css from './style.module.css'
 const AppHeader = () => {
-
-    console.log("<Footer /> : \n");
-
     const body = () => {
         return (
             <footer>

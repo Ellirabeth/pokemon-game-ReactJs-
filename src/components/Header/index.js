@@ -1,10 +1,5 @@
 import css from './style.module.css'
 const AppHeader = ({title, descr}) => {
-
-    console.log("<Header /> : \n" +
-        " title=" + title + "\n" +
-        " descr=" + descr);
-
     const body = () => {
         return(
             <header className={css.root}>
